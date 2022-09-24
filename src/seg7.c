@@ -20,7 +20,7 @@
 #include <inc/hw_memmap.h>
 #include <driverlib/gpio.h>
 #include <driverlib/pin_map.h>
-#include "launchpad.h"
+#include "Util/launchpad.h"
 #include "seg7.h"
 
 // MCU connections to TiM1637's CLK and DIO pins. The default pin connections are as follows:
