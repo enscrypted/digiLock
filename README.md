@@ -20,7 +20,7 @@ digiLock is a conceptual application and has not been developed or tested with a
 ## Installation
 1. Connect the Tiva C Launchpad to the Grove Base
 2. Connect the 4 digit display to port J10 on the Grove Base
-3. Connect the RAS to port J11 on the Grove Base
+3. Connect the RAS to port J5 on the Grove Base
 4. Extract Project into CCS workspace, move all files from src and lib to root directory (can delete src and lib at this point)
 5. Open the project source code in CCS
 6. Right click on project and select Open Build Settings
