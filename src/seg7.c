@@ -44,18 +44,19 @@
 void
 seg7Init()
 {
-    // Enable GPIO Port B as peripheral.
-    SysCtlPeripheralEnable(PORT_PERIPH);
+  // Enable GPIO Port B as peripheral.
+  SysCtlPeripheralEnable(PORT_PERIPH);
 
-    // Set the pads for standard push-pull operation, with 8ma strength
-    GPIOPadConfigSet(PORT, CLK | DIO, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_OD);
+  // Set the pads for standard push-pull operation, with 8ma strength
+  GPIOPadConfigSet(PORT, CLK | DIO, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_OD);
 
-    // Make the pin be outputs
-    GPIODirModeSet(PORT, CLK | DIO, GPIO_DIR_MODE_OUT);
+  // Make the pin be outputs
+  GPIODirModeSet(PORT, CLK | DIO, GPIO_DIR_MODE_OUT);
 
-    // Initial states are high
-    GPIOPinWrite(PORT, CLK | DIO, CLK | DIO);
+  // Initial states are high
+  GPIOPinWrite(PORT, CLK | DIO, CLK | DIO);
 }
+
 
 // Send START bit of I2C: Keep CLK high (inactive), pull DIO from high to low.
 static void
