@@ -12,17 +12,24 @@ digiLock is a conceptual application and has not been developed or tested with a
 ## Requirements
 1. [CCS](https://www.ti.com/tool/CCSTUDIO)
 2. [Tiva TM4C123GH6PM](https://www.ti.com/product/TM4C123GH6PM)
-3. [Seeed Studio Grove Base](https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html)
-4. [Seeed Studio Grove Rotary Angle Sensor](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)
-5. [Seeed Studio Grove 4 Digit Display](https://www.seeedstudio.com/Grove-4-Digit-Display.html)
+3. [Tiva TM4C SDK](https://www.ti.com/tool/SW-TM4C)
+4. [Seeed Studio Grove Base](https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html)
+5. [Seeed Studio Grove Rotary Angle Sensor](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)
+6. [Seeed Studio Grove 4 Digit Display](https://www.seeedstudio.com/Grove-4-Digit-Display.html)
 
 ## Installation
 1. Connect the Tiva C Launchpad to the Grove Base
 2. Connect the 4 digit display to port J10 on the Grove Base
 3. Connect the RAS to port J11 on the Grove Base
-4. Open the project source code in CCS
-5. Connect the Tiva Launchpad to the computer
-6. Build and run the program
+4. Extract Project into CCS workspace, move all files from src and lib to root directory (can delete src and lib at this point)
+5. Open the project source code in CCS
+6. Right click on project and select Open Build Settings
+7. Add *TivaWare Installation Path*\driverlib\ccs\Debug\driverlib.lib to Arm Linker files
+8. Add *TivaWare Installation Path*\driverlib to Arm Linker Paths
+9. Add *TivaWare Installation Path* to Compiler Include Options paths
+10. Ensure "${CG_TOOL_ROOT}/lib" and "${CG_TOOL_ROOT}/include" are in Arm Linker Path, "libc.a" In Arm Linker Files, and that "${PROJECT_ROOT}" and "${CG_TOOL_ROOT}/include" are in the Compiler Include Options paths
+11. Connect the Tiva Launchpad to the computer
+12. Build and run the program
 
 
 ## Usage
