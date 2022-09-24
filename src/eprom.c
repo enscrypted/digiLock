@@ -13,6 +13,6 @@
 
 void epromInit()
 {
-        SysCtlPeripheralEnable(SYSCTL_PERIPH_EEPROM0);
-        EEPROMInit();
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_EEPROM0);
+  EEPROMInit();
 }
